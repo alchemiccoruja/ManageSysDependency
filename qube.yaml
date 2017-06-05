@@ -1,0 +1,32 @@
+id: 20c7de4e-5a6c-42da-a71b-ccd23147f53f
+version: v2
+name: ManageSysDependency
+apptype: api
+language: python
+containerName: managesysdependency
+toolchain:
+  id: 592f2dbd2a0490001eac1787
+  name: Qubeship-Python-Tox-Toolchain
+opinion:
+  id: 592f2dbd1dc410000b380432
+  name: Qubeship default opinion
+endpoint:
+  id: 592f2dbd23f901000b9efe2c
+  name: Qubeship Sandbox Cluster
+  type: target
+variables:
+  - name: APP_VERSION
+    value: v0.1
+build:
+  compile:
+    publish:
+     - dist/
+bake:
+  skip: false
+test:
+  skip: true
+deploy_to_qa:
+  skip: true
+deploy_to_prod:
+  skip: false
+
